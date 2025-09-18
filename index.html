@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login to Account</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    body { opacity: 0.15; transition: opacity 0.8s ease-in; }
+    body.loaded { opacity: 1; }
+    .custom-jumbotron {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 2rem 2.5rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+      color: #111010;
+    }
+    .input-group-append .btn { border-left: 0; }
+    .icon-btn { cursor: pointer; }
+  </style>
+</head>
+<body style="background-color: rgb(92,92,127);">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="jumbotron custom-jumbotron" style="background-color: rgb(224, 233, 230);">
+          <div class="text-center">
+            <i class="fa-solid fa-user fa-3x text-primary"></i>
+            <h2 class="text-primary mt-3"><tt>Welcome Back</tt></h2>
+            <h4><tt>Sign in to your Taskpro Account</tt></h4>
+          </div>
+          <!-- LOGIN FORM -->
+          <form id="loginForm" class="mt-4">
+            <div class="form-group">
+              <label for="username">Username*</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-user"></i></span>
+                </div>
+                <input id="username" type="text" class="form-control" placeholder="Enter username" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="password">Password*</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                </div>
+                <input id="password" name="password" type="password" class="form-control" placeholder="Enter password" required>
+                <div class="input-group-append">
+                  <button id="togglePasswordBtn" type="button" class="btn btn-light icon-btn" aria-label="Show password">
+                    <i id="eyeIcon" class="fas fa-eye"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="submit" class="btn btn-block" value="Login"
+                     style="background-color: rgb(93,108,221); color: black;">
+            </div>
+            <p id="errorMsg" class="text-danger text-center" style="display:none;">❌ Username or Password is wrong</p>
+            <p class="text-center">Don't have an account? <a href="Taskpro_Registration.html">Register now</a></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    window.addEventListener('load', function () {
+      document.body.classList.add('loaded');
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const pwd = document.getElementById('password');
+      const btn = document.getElementById('togglePasswordBtn');
+      const icon = document.getElementById('eyeIcon');
+      const form = document.getElementById('loginForm');
+      const user = document.getElementById('username');
+      const errorMsg = document.getElementById('errorMsg');
+
+      // Toggle password visibility
+      btn.addEventListener('click', function () {
+        const isHidden = pwd.type === 'password';
+        pwd.type = isHidden ? 'text' : 'password';
+        icon.classList.toggle('fa-eye');
+        icon.classList.toggle('fa-eye-slash');
+        btn.setAttribute('aria-label', isHidden ? 'Hide password' : 'Show password');
+      });
+
+      // Validate login
+      form.addEventListener('submit', function (e) {
+        e.preventDefault(); // prevent default form action
+        if (user.value === "Akash_123" && pwd.value === "Akash_12345") {
+          window.location.href = "homepage.html"; // redirect if valid
+        } else {
+          errorMsg.style.display = "block"; // show error message
+        }
+      });
+    });
+  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Dashboard - TaskPro</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="rani.CSS">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Dashboard Header */
+    header {
+      background: #1e1e1e;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid blueviolet;
+    }
+    header h1 {
+      color: #4cc9f0;
+      font-size: 24px;
+    }
+    nav a {
+      color: #ccc;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #4cc9f0;
+    }
+
+    /* Dashboard Layout */
+    .dashboard {
+      display: flex;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      background: #1c1c1c;
+      width: 220px;
+      height: calc(100vh - 60px);
+      padding: 20px;
+      border-right: 2px solid rgb(14, 106, 14);
+      position: sticky;
+      top: 60px;
+    }
+    .sidebar h3 {
+      color: #4cc9f0;
+      margin-bottom: 20px;
+    }
+    .sidebar a {
+      display: block;
+      color: #ccc;
+      padding: 10px 5px;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+    .sidebar a:hover {
+      background: #2a77a4;
+      color: #104251;
+    }
+
+    /* Main Content */
+    .content {
+      flex: 1;
+      padding: 20px 40px;
+    }
+
+    /* Product Section */
+    .product-container {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+    .product-container img {
+      width: 250px;
+      border-radius: 8px;
+    }
+    .product-info h2 {
+      color: #4cc9f0;
+    }
+    .price {
+      color: #4caf50;
+      font-size: 20px;
+      margin: 10px 0;
+    }
+    .rating {
+      color: orange;
+      margin-bottom: 10px;
+    }
+    .btn {
+      display: inline-block;
+      background: #4cc9f0;
+      padding: 10px 20px;
+      border-radius: 20px;
+      color: black;
+      font-weight: bold;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+
+    /* Related Products */
+    .related {
+      background: black;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .related h3 {
+      font-size: 22px;
+      color: #4cc9f0;
+    }
+    .related-products {
+      display: flex;
+      gap: 20px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    .related-item {
+      background: #2a2a2a;
+      border-radius: 10px;
+      padding: 10px;
+      width: 180px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .related-item:hover {
+      transform: scale(1.05);
+    }
+    .related-item img {
+      width: 100%;
+      border-radius: 6px;
+    }
+    .related-item h4 {
+      margin: 10px 0;
+      font-size: 16px;
+      color: #fff;
+    }
+    .related-item .price {
+      font-size: 14px;
+      color: #4caf50;
+    }
+
+    /* ✅ FIX: Submenu position for multi-level dropdown */
+    .dropdown-submenu {
+      position: relative;
+    }
+    .dropdown-submenu > .dropdown-menu {
+      top: 0;
+      left: 100%;   /* push submenu to the right */
+      margin-top: -1px;
+      display: none; /* hide by default */
+    }
+    .dropdown-submenu:hover > .dropdown-menu {
+      display: block; /* show on hover */
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="#"><i class="fa-solid fa-shop"></i> TaskPro</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Left Side (Home, Categories, Cart, Notifications) -->
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link text-white" href="homepage.html"><i class="fa-solid fa-house"></i> Home</a></li>
+
+        <!-- Categories dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
+            Categories
+          </a>
+
+          <!-- ✅ FIX: Submenus structured properly -->
+          <ul class="dropdown-menu" style="background:#f8f9fa; border:1px solid #ccc; min-width:180px;">
+            <!-- MEN -->
+            <li class="dropdown-submenu">
+              <a class="dropdown-item" href="#">Men ▸</a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item" href="#">Shirts ▸</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Summerwear</a></li>
+                    <li><a class="dropdown-item" href="#">Casual</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item" href="#">Pants ▸</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Jeans</a></li>
+                    <li><a class="dropdown-item" href="#">Cotton Pant</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <!-- WOMEN -->
+            <li class="dropdown-submenu">
+              <a class="dropdown-item" href="#">Women ▸</a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item" href="#">Shirts ▸</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Crop Tops</a></li>
+                    <li><a class="dropdown-item" href="#">Blouses</a></li>
+                    <li><a class="dropdown-item" href="#">Korean</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item" href="#">Pants ▸</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Jeans</a></li>
+                    <li><a class="dropdown-item" href="#">Leggings</a></li>
+                    <li><a class="dropdown-item" href="#">Palazzo</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <!-- CHILD -->
+            <li class="dropdown-submenu">
+              <a class="dropdown-item" href="#">Child ▸</a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item" href="#">Clothes ▸</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Baby Wear</a></li>
+                    <li><a class="dropdown-item" href="#">T-Shirts</a></li>
+                    <li><a class="dropdown-item" href="#">Shorts</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <!-- GYM -->
+            <li class="dropdown-submenu">
+              <a class="dropdown-item" href="#">Gym ▸</a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item" href="#">Equipments ▸</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Dumbbells</a></li>
+                    <li><a class="dropdown-item" href="#">Treadmill</a></li>
+                    <li><a class="dropdown-item" href="#">Yoga Mat</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <!-- OTHERS -->
+            <li class="dropdown-submenu">
+              <a class="dropdown-item" href="#">Others ▸</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Accessories</a></li>
+                <li><a class="dropdown-item" href="#">Bags</a></li>
+                <li><a class="dropdown-item" href="#">Shoes</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link hov text-white" href="cort.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
+
+        <!-- Notifications -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
+            Notifications
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li style="opacity: 0.5;color:black; width:100%; height:100px">products</li>
+            <li><hr class="dropdown-divider"></li>
+            <li>view all</li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- Right Side (User) -->
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
+            <i class="fa-solid fa-user" style="font-size:28px;"></i> 
+            <span class="fw-bold">sasi</span>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><h6 class="text text-center text-dark">HI SASI</h6></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#profile"><i class="fa-solid fa-id-card"></i> Profile</a></li>
+            <li><a class="dropdown-item" href="#settings"><i class="fa-solid fa-gear"></i> Settings</a></li>
+            <li><a class="dropdown-item" href="#orders"><i class="fa-solid fa-history"></i> History order</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-danger" href="index.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <br><br><br><br>
+
+  <!-- Main Content -->
+  <main class="content">
+    <!-- Product Section -->
+    <section class="product-container">
+      <img src="https://www.thekoreanfashion.com/cdn/shop/files/Casual-Long-sleeved-Shirt-The-Korean-Fashion-2_84fb69e7-156a-4a4f-a42b-3534dcad6e70.jpg?v=1734571370&width=1000" alt="Cotten shirt">
+      <div class="product-info">
+        <h2>Korean Style</h2>
+        <div class="price">₹ 1599</div>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <p>Corean collection</p>
+        <a href="cort.html" class="btn">🛒 Add to Cart</a>
+        <a href="#related" class="btn">⭐ Related Products</a>
+      </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related" id="related">
+      <section class="container my-5" id="home">
+        <div class="text-center mb-4">
+          <h2><i class="fa-solid fa-box"></i> Related Products</h2>
+          <p class="text">Discover similar items you might like</p>
+          <br><br><br>
+          <p class="text">No Products Avalable</p>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <section>
+    <hr class="my-4">
+    <div style="color:blueviolet" class="text text-center">
+      <p>© 2025 TaskPro. All rights reserved. ❤</p>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white py-3 mt-5 w-300 fixed-bottom">
+    <div class="d-flex justify-content-between align-items-center px-4">
+      <p class="mb-0">⚡ Welcome to TaskPro — Shop the best products today!</p>
+      <span class="badge bg-info text-dark fs-6 px-3 py-2">Products: 8</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

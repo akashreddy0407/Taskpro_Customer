@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    body {
+      opacity: 0.2;
+      transition: opacity 0.8s ease-in;
+    }
+    body.loaded {
+      opacity: 2;
+    }
+    .custom-jumbotron {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 2rem 2.5rem;
+      background-color: #1e1e1e;
+      border-radius: 15px;
+      box-shadow: 0px 4px 20px rgba(0,0,0,0.3);
+      color: rgb(8, 8, 8);
+    }
+    .toggle-password {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body style="background-color: rgb(92, 92, 127);">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="jumbotron custom-jumbotron" style="background-color: rgb(224, 233, 230);">
+          <center>
+            <i class="fa-solid fa-user-plus fa-3x text-primary"></i>
+          </center>
+          <h2 class="text-primary mt-3 text-center"><tt>Create Account</tt></h2>
+          <h3 class="text-center"><tt>Join Taskpro and discover amazing products</tt></h3>
+          <br>
+          <a href="#" style="text-decoration: none;"><i class="fa-solid fa-id-card-clip"></i> Account information</a>
+          
+          <form action="" onsubmit="return Register()" method="post">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="">First Name*</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+                  </div>
+                  <input type="text" class="form-control" placeholder="Your first name" required>
+                </div>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="">Last Name*</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+                  </div>
+                  <input type="text" class="form-control" placeholder="Your last name" required>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="">Email Address*</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+                </div>
+                <input type="email" class="form-control" placeholder="your.email@example.com" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="">Username*</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+                </div>
+                <input type="text" class="form-control" placeholder="Choose a username"
+                       required pattern="[A-Z]{1}[a-z]*[_]{1}[0-9]{3}" title="EX-Abcd_123">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="">Password*</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
+                  </div>
+                  <input type="password" class="form-control" placeholder="Create a strong Password"
+                         required pattern="[A-Z]{1}[a-z]*[_]{1}[0-9]{5}" title="Abcdef_12345"
+                         id="A" autocomplete="off">
+                  <div class="input-group-append">
+                    <span class="input-group-text toggle-password" onclick="togglePassword('A','eyeA')">
+                      <i id="eyeA" class="fa-solid fa-eye"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="">Confirm password*</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
+                  </div>
+                  <input type="password" class="form-control" placeholder="Confirm your password"
+                         required pattern="[A-Z]{1}[a-z]*[_]{1}[0-9]{5}" title="Abcdef_12345"
+                         id="B" autocomplete="off">
+                  <div class="input-group-append">
+                    <span class="input-group-text toggle-password" onclick="togglePassword('B','eyeB')">
+                      <i id="eyeB" class="fa-solid fa-eye"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="errorMsg" class="alert alert-danger text-center" style="display:none;"></div>
+            <hr>
+            <a href="#" style="text-decoration: none;"><i class="fa-solid fa-id-card"></i> Profile Information</a><br>
+            <div class="form-group">
+              <label for="">Profile picture(Optional)</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fa-solid fa-camera"></i></span>
+                </div>
+                <input type="file">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="">Phone Number</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fa-solid fa-phone"></i></span>
+                </div>
+                <input type="number" class="form-control" placeholder="+91 1234567890">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="">Date of Birth</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fa-solid fa-calendar-days"></i></span>
+                </div>
+                <input type="date" class="form-control">
+              </div>
+            </div>
+
+            <hr>
+            <div class="form-group text-center">
+              <input type="submit" class="btn btn-primary btn-lg" value="Create Account" style="width: 500px;">
+            </div>
+            <center>
+              <p>Already have an account? <a href="index.html">Sign in here</a></p>
+            </center>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener("load", function () {
+      document.body.classList.add("loaded");
+    });
+
+    const passwordInput = document.getElementById("A");
+    const confirmInput = document.getElementById("B");
+    const errorMsg = document.getElementById("errorMsg");
+
+    function Register() {
+      const password = passwordInput.value;
+      const com_password = confirmInput.value;
+
+      if (password !== com_password) {
+        errorMsg.innerHTML = "Password and Confirm Password do not match!";
+        errorMsg.style.display = "block";
+        return false; 
+      }
+      errorMsg.style.display = "none";
+      window.location.href = "index.html";
+      return false; 
+    }
+    confirmInput.addEventListener("input", function () {
+      if (errorMsg.style.display === "block") {
+        if (confirmInput.value === "" || passwordInput.value === confirmInput.value) {
+          errorMsg.style.display = "none";
+        }
+      }
+    });
+    function togglePassword(inputId, eyeId) {
+      var input = document.getElementById(inputId);
+      var eyeIcon = document.getElementById(eyeId);
+      if (input.type === "password") {
+        input.type = "text";
+        eyeIcon.classList.remove("fa-eye");
+        eyeIcon.classList.add("fa-eye-slash");
+      } else {
+        input.type = "password";
+        eyeIcon.classList.remove("fa-eye-slash");
+        eyeIcon.classList.add("fa-eye");
+      }
+    }
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

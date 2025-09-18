@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskPro - Shop Amazing Products</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="#"><i class="fa-solid fa-shop"></i> TaskPro</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    
+      <!-- Left Side (Home, Categories, Cart, Notifications) -->
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link text-white" href="#home"><i class="fa-solid fa-house"></i> Home</a></li>
+
+        <!-- Categories dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
+            Categories
+          </a>
+          <!-- your categories submenu here -->
+            <ul class="dropdown-menu" style="background:#f8f9fa; border:1px solid #ccc; min-width:180px;">
+
+              <!-- MEN -->
+    <li class="dropdown-submenu">
+      <a class="dropdown-item" href="#">Men ▸</a>
+      <ul class="dropdown-menu">
+
+        <!-- Shirts -->
+        <li class="dropdown-submenu">
+          <a class="dropdown-item" href="#">Shirts ▸</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Summerwear</a></li>
+            <li><a class="dropdown-item" href="#">Casual</a></li>
+            
+          </ul>
+        </li>
+
+        <!-- Pants -->
+        <li class="dropdown-submenu">
+          <a class="dropdown-item" href="#">Pants ▸</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Jeans</a></li>
+            <li><a class="dropdown-item" href="#">Cotton Pant</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </li>
+
+    <!-- WOMEN -->
+    <li class="dropdown-submenu">
+      <a class="dropdown-item" href="#">Women ▸</a>
+      <ul class="dropdown-menu">
+        <li class="dropdown-submenu">
+          <a class="dropdown-item" href="#">Shirts ▸</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Crop Tops</a></li>
+            <li><a class="dropdown-item" href="#">Blouses</a></li>
+            <li><a class="dropdown-item" href="#">Korean</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-submenu">
+          <a class="dropdown-item" href="#">Pants ▸</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Jeans</a></li>
+            <li><a class="dropdown-item" href="#">Leggings</a></li>
+            <li><a class="dropdown-item" href="#">Palazzo</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- CHILD -->
+    <li class="dropdown-submenu">
+      <a class="dropdown-item" href="#">Child ▸</a>
+      <ul class="dropdown-menu">
+        <li class="dropdown-submenu">
+          <a class="dropdown-item" href="#">Clothes ▸</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Baby Wear</a></li>
+            <li><a class="dropdown-item" href="#">T-Shirts</a></li>
+            <li><a class="dropdown-item" href="#">Shorts</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- GYM -->
+    <li class="dropdown-submenu">
+      <a class="dropdown-item" href="#">Gym ▸</a>
+      <ul class="dropdown-menu">
+        <li class="dropdown-submenu">
+          <a class="dropdown-item" href="#">Equipments ▸</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Dumbbells</a></li>
+            <li><a class="dropdown-item" href="#">Treadmill</a></li>
+            <li><a class="dropdown-item" href="#">Yoga Mat</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- OTHERS -->
+    <li class="dropdown-submenu">
+      <a class="dropdown-item" href="#">Others ▸</a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Accessories</a></li>
+        <li><a class="dropdown-item" href="#">Bags</a></li>
+        <li><a class="dropdown-item" href="#">Shoes</a></li>
+      </ul>
+    </li>
+
+  </ul>
+</li>
+
+        <li class="nav-item"><a class="nav-link hov text-white" href="cort.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
+            Notifications
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li style="opacity: 0.5;color:black; width:100%; height:100px">products</li>
+            <li><hr class="dropdown-divider"></li>
+            <li>view all</li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- Right Side (User Only) -->
+       
+      <ul class="navbar-nav ms-auto">
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
+      <i class="fa-solid fa-user" style="font-size:28px;"></i> 
+      <span class="fw-bold">sasi</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end">
+      <li><h6 class="text text-center text-dark">HI SASI</h6></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" href="#profile"><i class="fa-solid fa-id-card"></i> Profile</a></li>
+      <li><a class="dropdown-item" href="#settings"><i class="fa-solid fa-gear"></i> Settings</a></li>
+      <li><a class="dropdown-item" href="#orders"><i class="fa-solid fa-history"></i> History order</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item text-danger" href="index.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+    </ul>
+  </li>
+</ul>
+
+    </div>
+  </div>
+</nav>
+
+<script>
+  // Show sub-menu on hover
+  document.querySelectorAll('.dropdown-submenu').forEach(function(el){
+    el.addEventListener('mouseenter', function(){
+      this.querySelector('.dropdown-menu').style.display = 'block';
+    });
+    el.addEventListener('mouseleave', function(){
+      this.querySelector('.dropdown-menu').style.display = 'none';
+    });
+  });
+</script>
+<br>
+<br>
+    <section class="container my-4">
+      <div class="card p-3 shadow-sm">
+        <h4><i class="fa-solid fa-filter"></i> Search & Filter</h4>
+        <div class="row g-2 mt-2">
+          <div class="col-md-5">
+            <input type="text" id="searchInput" class="form-control" placeholder="Search products...">
+          </div>
+          <div class="col-md-3">
+            <input type="number" id="priceInput" class="form-control" placeholder="Max Price (₹)">
+          </div>
+          <div class="col-md-2">
+            <button id="applyFilter" class="btn btn-success w-100">✓ Apply</button>
+          </div>
+          <div class="col-md-2">
+            <button id="clearFilter" class="btn btn-danger w-100">✕ Clear</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container my-5" id="home">
+      <div class="text-center mb-4">
+        <h2><i class="fa-solid fa-box"></i> Explore Products</h2>
+        <p class="text">Browse our wide range of products</p>
+      </div>
+      <div class="row g-4" id="product">
+  
+<!-------------------main one copy this-->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-name="summerwear" data-price="1200">
+  <div class="card h-100 shadow-sm position-relative">
+    
+    <!-- Price at top-right -->
+    <span class="price-tag position-absolute top-0 end-0 m-2">₹ 999</span>
+    <!-- Stock status below price -->
+    <span class="stock-status position-absolute top-0 end-0 mt-5 me-2 ">
+      <i class="fa-solid fa-circle-xmark"></i> Out of Stock
+    </span>
+
+    <!-- Product Image -->
+    <img src="https://www.simplikurta.com/cdn/shop/files/O1CN01sHdRQM1nOETJZ06Qi__2215870365079-0-cib-Photoroom.png?v=1710578374" class="card-img-top" alt="Cotton Shirt">
+
+    <div class="card-body text-center">
+      <!-- Product Name -->
+      <h5 class="card-title">Cotton</h5>
+      
+      <div style="display: flex; flex-direction: column; width: 100%; gap: 10px;">
+  <button class="btn btn-primary bg-dark">
+    <i class="fa-solid fa-bell"></i> Notify
+  </button>
+  <button class="btn btn-outline-secondary" onclick="window.location.href='view1.html'">
+    👁 View Details
+  </button>
+</div>
+    </div>
+  </div>
+        </div>
+
+    <!-------until here paste and changes do-->
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-name="coreanstyle" data-price="4499">
+  <div class="card h-100 shadow-sm position-relative">
+    
+    <!-- Price at top-right -->
+    <span class="price-tag position-absolute top-0 end-0 m-2">₹ 1599</span>
+    <!-- Stock status below price -->
+    <span class="stock-status position-absolute top-0 end-0 mt-5 me-2 bg-warning text-dark">
+      <i class="fa-solid fa-triangle-exclamation"></i> only 2 left
+    </span>
+
+    <!-- Product Image -->
+    <img src="https://www.thekoreanfashion.com/cdn/shop/files/Casual-Long-sleeved-Shirt-The-Korean-Fashion-2_84fb69e7-156a-4a4f-a42b-3534dcad6e70.jpg?v=1734571370&width=1000" class="card-img-top" alt="Corean Style">
+
+    <div class="card-body text-center">
+      <!-- Product Name -->
+      <h5 class="card-title">Korean Style</h5>
+      
+      <div style="display: flex; flex-direction: column; width: 100%; gap: 10px;">
+  <button class="btn btn-primary" onclick="window.location.href='cort.html'" >
+    🛒 Add to Cart
+  </button>
+  <button class="btn btn-outline-secondary" onclick="window.location.href='view2.html'">
+    👁 View Details
+  </button>
+</div>
+    </div>
+  </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-name="summerwear" data-price="249">
+  <div class="card h-100 shadow-sm position-relative">
+    
+    <!-- Price at top-right -->
+    <span class="price-tag position-absolute top-0 end-0 m-2">₹ 1399</span>
+    <!-- Stock status below price -->
+    <span class="stock-status position-absolute top-0 end-0 mt-5 me-2 bg-warning text-dark">
+      <i class="fa-solid fa-triangle-exclamation"></i> only 1 left
+    </span>
+
+    <!-- Product Image -->
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIHsTw68lfvDhhnoRHc3nf4uVEZ-c-ee2ThQ&s" class="card-img-top" alt="Summerwear">
+
+    <div class="card-body text-center">
+      <!-- Product Name -->
+      <h5 class="card-title">Summerwear</h5>
+
+      <div style="display: flex; flex-direction: column; width: 100%; gap: 10px;">
+  <button class="btn btn-primary" onclick="window.location.href='cort.html'">
+    🛒 Add to Cart
+  </button>
+  <button class="btn btn-outline-secondary" onclick="window.location.href='view3.html'">
+    👁 View Details
+  </button>
+</div>
+    </div>
+  </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-name="cottonpant" data-price="249.7">
+  <div class="card h-100 shadow-sm position-relative">
+    
+    <!-- Price at top-right -->
+    <span class="price-tag position-absolute top-0 end-0 m-2">₹ 1899</span>
+    <!-- Stock status below price -->
+    <span class="stock-status position-absolute top-0 end-0 mt-5 me-2 bg-warning text-dark">
+      <i class="fa-solid fa-triangle-exclamation"></i> only 1 left
+    </span>
+
+    <!-- Product Image -->
+    <img src="https://bofrike.in/wp-content/uploads/2024/04/desert-sand-korean-pant-1-510x612.jpg" class="card-img-top" alt="CottonPant">
+
+    <div class="card-body text-center">
+      <!-- Product Name -->
+      <h5 class="card-title">CottonPant</h5>
+
+      <div style="display: flex; flex-direction: column; width: 100%; gap: 10px;">
+  <button class="btn btn-primary" onclick="window.location.href='cort.html'">
+    🛒 Add to Cart
+  </button>
+  <button class="btn btn-outline-secondary" onclick="window.location.href='view4.html'">
+    👁 View Details
+  </button>
+</div>
+    </div>
+  </div>
+        </div>
+        <div class="row g-4 mt-4" id="product">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-name="hoody" data-price="999">
+  <div class="card h-100 shadow-sm position-relative">
+    
+    <!-- Price at top-right -->
+    <span class="price-tag position-absolute top-0 end-0 m-2">₹ 999</span>
+    <!-- Stock status below price -->
+    <span class="stock-status position-absolute top-0 end-0 mt-5 me-2 bg-warning text-dark ">
+      <i class="fa-solid fa-triangle-exclamation"></i> only 1 left
+    </span>
+
+    <!-- Product Image -->
+    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRTl-u88XiamuyZ0XNTe-Sl0pIhvBBF5cU2gZhmirBiEVQfBN-ze_nbJKXoTBhaHthYer9MDPQ6lN6O1QshlZjRPiOwRLdd2wZO4_Gkfsi14fcu77sq5NKUITMSSrb_hLpooP60&usqp=CAc" class="card-img-top" alt="hoody">
+
+    <div class="card-body text-center">
+      <!-- Product Name -->
+      <h5 class="card-title">Hoody</h5>
+
+      <div style="display: flex; flex-direction: column; width: 100%; gap: 10px;">
+  <button class="btn btn-primary">
+    🛒 Add to Cart
+  </button>
+  <button class="btn btn-outline-secondary">
+    👁 View Details
+  </button>
+</div>
+    </div>
+  </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-name="dress" data-price="99999.09">
+  <div class="card h-100 shadow-sm position-relative">
+    
+    <!-- Price at top-right -->
+    <span class="price-tag position-absolute top-0 end-0 m-2">₹ 9999</span>
+    <!-- Stock status below price -->
+    <span class="stock-status position-absolute top-0 end-0 mt-5 me-2 bg-warning text-dark">
+      <i class="fa-solid fa-triangle-exclamation"></i> only 1 left
+    </span>
+
+    <!-- Product Image -->
+    <img src="data:image/webp;base64,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" class="card-img-top" alt="dress">
+
+    <div class="card-body text-center">
+      <!-- Product Name -->
+      <h5 class="card-title">Dress</h5>
+
+      <div style="display: flex; flex-direction: column; width: 100%; gap: 10px;">
+  <button class="btn btn-primary">
+    🛒 Add to Cart
+  </button>
+  <button class="btn btn-outline-secondary">
+    👁 View Details
+  </button>
+</div>
+    </div>
+  </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-name="thread" data-price="14999">
+  <div class="card h-100 shadow-sm position-relative">
+    
+    <!-- Price at top-right -->
+    <span class="price-tag position-absolute top-0 end-0 m-2">₹ 14999</span>
+    <!-- Stock status below price -->
+    <span class="stock-status position-absolute top-0 end-0 mt-5 me-2 bg-warning text-dark ">
+      <i class="fa-solid fa-triangle-exclamation"></i> only 1 left
+    </span>
+
+    <!-- Product Image -->
+    <img src="https://energiefitness.in/cdn/shop/files/CommercialTreadmillECT-106.png?v=1700471560" class="card-img-top" alt="thread">
+
+    <div class="card-body text-center">
+      <!-- Product Name -->
+      <h5 class="card-title">TreadMill</h5>
+      <div style="display: flex; flex-direction: column; width: 100%; gap: 10px;">
+  <button  class="btn btn-primary">
+    🛒 Add to Cart
+  </button>
+  <button class="btn btn-outline-secondary">
+    👁 View Details
+  </button>
+</div>
+    </div>
+  </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-name="shoes" data-price="899">
+  <div class="card h-100 shadow-sm position-relative">
+    
+    <!-- Price at top-right -->
+    <span class="price-tag position-absolute top-0 end-0 m-2">₹ 899</span>
+    <!-- Stock status below price -->
+    <span class="stock-status position-absolute top-0 end-0 mt-5 me-2 bg-warning text-dark">
+      <i class="fa-solid fa-triangle-exclamation"></i> only 1 left
+    </span>
+
+    <!-- Product Image -->
+    <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTjmZyVPXhmj_PnKrwNg2mRa8AyqsciU88jXDh2b_LqfsoxMjuoJwKy4Gp89c3jBvHw6MhUM7bfDRcPbCTLQA6cSn907v62-fWXtGuJCLl3H3p0CQSx64RxWDQ984DVYcMZXAE&usqp=CAc" class="card-img-top" alt="shoes">
+
+    <div class="card-body text-center">
+      <!-- Product Name -->
+      <h5 class="card-title">Boots</h5>
+
+      <!-- Buttons stacked -->
+<div style="display: flex; flex-direction: column; width: 100%; gap: 10px;">
+  <button class="btn btn-primary">
+    🛒 Add to Cart
+  </button>
+  <button class="btn btn-outline-secondary">
+    👁 View Details
+  </button>
+</div>
+    </div>
+  </div>
+        </div>
+  
+    </section>
+      <hr>
+
+    <section>
+      <div style="color:blueviolet" class="text text-center mt-2">
+        <p> © 2025 TaskPro. All rights reserved. ❤</p>
+      </div>
+    </section>
+    <hr>
+    
+
+
+<footer class="bg-dark text-white py-3 mt-5 w-300 fixed-bottom">
+  <div class="d-flex justify-content-between align-items-center px-4">
+    <p class="mb-0">
+      ⚡ Welcome to TaskPro — Shop the best products today!
+    </p>
+    <span class="badge bg-info text-dark fs-6 px-3 py-2">Products: 8</span>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

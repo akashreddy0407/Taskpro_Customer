@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,20 +12,19 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container-fluid">
-    <a class="navbar-brand fw-bold" href="#"><i class="fa-solid fa-shop"></i> TaskPro</a>
+    <a class="navbar-brand fw-bold" href="#">&nbsp;&nbsp;<i class="fa-solid fa-shop"></i> TaskPro</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     
       <!-- Left Side (Home, Categories, Cart, Notifications) -->
       <ul class="navbar-nav me-auto">
-        <li class="nav-item"><a class="nav-link text-white" href="#home"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#home">&nbsp;&nbsp;<i class="fa-solid fa-house"></i> Home</a></li>
 
         <!-- Categories dropdown -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
-            Categories
+          &nbsp;&nbsp;&nbsp;&nbsp;Categories
           </a>
           <!-- your categories submenu here -->
             <ul class="dropdown-menu" style="background:#f8f9fa; border:1px solid #ccc; min-width:180px;">
@@ -122,16 +122,16 @@
   </ul>
 </li>
 
-        <li class="nav-item"><a class="nav-link hov text-white" href="cort.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
+        <li class="nav-item"><a class="nav-link hov text-white" href="cort.html">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-cart-shopping"></i>Cart</a></li>
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
-            Notifications
+          &nbsp;&nbsp;&nbsp;&nbsp;Notifications
           </a>
           <ul class="dropdown-menu dropdown-menu-end">
-            <li style="opacity: 0.5;color:black; width:100%; height:100px">products</li>
+            <li class="dropdown-item text-muted">No new notifications</li>
             <li><hr class="dropdown-divider"></li>
-            <li>view all</li>
+            <li><a class="dropdown-item" href="#">View all</a></li>
           </ul>
         </li>
       </ul>
@@ -195,14 +195,13 @@
     <section class="container my-5" id="home">
       <div class="text-center mb-4">
         <h2><i class="fa-solid fa-box"></i> Explore Products</h2>
-        <p class="text">Browse our wide range of products</p>
+        <p class="text" style="height: 90%;">Browse our wide range of products</p>
       </div>
       <div class="row g-4" id="product">
   
 <!-------------------main one copy this-->
         <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-name="summerwear" data-price="1200">
   <div class="card h-100 shadow-sm position-relative">
-    
     <!-- Price at top-right -->
     <span class="price-tag position-absolute top-0 end-0 m-2">₹ 999</span>
     <!-- Stock status below price -->

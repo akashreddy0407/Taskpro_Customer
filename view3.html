@@ -169,149 +169,162 @@
   </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand fw-bold" href="#"><i class="fa-solid fa-shop"></i> TaskPro</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top border-bottom border-primary">
+  <div class="container-fluid">
+    <!-- Brand -->
+    <a class="navbar-brand fw-bold" href="#">&nbsp;&nbsp;<i class="fa-solid fa-shop"></i> TaskPro</a>
 
-      <!-- ✅ CHANGE: wrap all links inside collapse -->
-      <div class="collapse navbar-collapse" id="nav">
-        <!-- Left Side (Home, Categories, Cart, Notifications) -->
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item"><a class="nav-link text-white" href="homepage.html"><i class="fa-solid fa-house"></i> Home</a></li>
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-          <!-- Categories dropdown -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
-              Categories
-            </a>
+    <!-- Menu -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <!-- Left -->
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="homepage.html"><i class="fa-solid fa-house"></i>&nbsp;&nbsp;Home</a>
+        </li>
 
-            <!-- ✅ CHANGE: Submenus structured properly -->
-            <ul class="dropdown-menu" style="background:#f8f9fa; border:1px solid #ccc; min-width:180px;">
-              <!-- MEN -->
-              <li class="dropdown-submenu">
-                <a class="dropdown-item" href="#">Men ▸</a>
-                <ul class="dropdown-menu">
-                  <li class="dropdown-submenu">
-                    <a class="dropdown-item" href="#">Shirts ▸</a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#" style="width: 90%;">Summerwear</a></li>
-                      <li><a class="dropdown-item" href="#" style="width: 90%;">Casual</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown-submenu">
-                    <a class="dropdown-item" href="#">Pants ▸</a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#" style="width: 90%;">Jeans</a></li>
-                      <li><a class="dropdown-item" href="#" style="width: 90%;">Cotton Pant</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-
-              <!-- WOMEN -->
-              <li class="dropdown-submenu">
-                <a class="dropdown-item" href="#">Women ▸</a>
-                <ul class="dropdown-menu">
-                  <li class="dropdown-submenu">
-                    <a class="dropdown-item" href="#">Shirts ▸</a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#" style="width: 90%;">Crop Tops</a></li>
-                      <li><a class="dropdown-item" href="#" style="width: 90%;">Blouses</a></li>
-                      <li><a class="dropdown-item" href="#" style="width: 90%;">Korean</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown-submenu">
-                    <a class="dropdown-item" href="#">Pants ▸</a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#" style="width: 90%;">Jeans</a></li>
-                      <li><a class="dropdown-item" href="#" style="width: 90%;">Leggings</a></li>
-                      <li><a class="dropdown-item" href="#" style="width: 90%;">Palazzo</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-
-              <!-- CHILD -->
-              <li class="dropdown-submenu">
-                <a class="dropdown-item" href="#">Child ▸</a>
-                <ul class="dropdown-menu">
-                  <li class="dropdown-submenu">
-                    <a class="dropdown-item" href="#">Clothes ▸</a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#" style="width: 90%;">Baby Wear</a></li>
-                      <li><a class="dropdown-item" href="#" style="width: 90%;">T-Shirts</a></li>
-                      <li><a class="dropdown-item" href="#" style="width: 90%;">Shorts</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-
-              <!-- GYM -->
-              <li class="dropdown-submenu">
-                <a class="dropdown-item" href="#">Gym ▸</a>
-                <ul class="dropdown-menu">
-                  <li class="dropdown-submenu">
-                    <a class="dropdown-item" href="#">Equipments ▸</a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#" style="width: 90%;">Dumbbells</a></li>
-                      <li><a class="dropdown-item" href="#" style="width: 90%;">Treadmill</a></li>
-                      <li><a class="dropdown-item" href="#" style="width: 90%;">Yoga Mat</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-
-              <!-- OTHERS -->
-              <li class="dropdown-submenu">
-                <a class="dropdown-item" href="#">Others ▸</a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#" style="width: 90%;">Accessories</a></li>
-                  <li><a class="dropdown-item" href="#" style="width: 90%;">Bags</a></li>
-                  <li><a class="dropdown-item" href="#" style="width: 90%;">Shoes</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-
-          <li class="nav-item"><a class="nav-link hov text-white" href="cort.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
-
-          <!-- Notifications -->
-          <li class="nav-item dropdown">
+        <!-- Categories Dropdown -->
+               <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
-            Notifications
+          &nbsp;&nbsp;&nbsp;&nbsp;Categories
+          </a>
+          <!-- your categories submenu here -->
+            <ul class="dropdown-menu" style="background:#f8f9fa; border:1px solid #ccc; min-width:180px;">
+
+              <!-- MEN -->
+    <li class="dropdown-submenu">
+      <a class="dropdown-item" href="#">Men ▸</a>
+      <ul class="dropdown-menu">
+
+        <!-- Shirts -->
+        <li class="dropdown-submenu">
+          <a class="dropdown-item" href="#">Shirts ▸</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#" style="width: 90%;">Summerwear</a></li>
+            <li><a class="dropdown-item" href="#" style="width: 90%;">Casual</a></li>
+
+          </ul>
+        </li>
+
+        <!-- Pants -->
+        <li class="dropdown-submenu">
+          <a class="dropdown-item" href="#">Pants ▸</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#" style="width: 90%;">Jeans</a></li>
+            <li><a class="dropdown-item" href="#" style="width: 90%;">Cotton Pant</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </li>
+
+    <!-- WOMEN -->
+    <li class="dropdown-submenu">
+      <a class="dropdown-item" href="#">Women ▸</a>
+      <ul class="dropdown-menu">
+        <li class="dropdown-submenu">
+          <a class="dropdown-item" href="#">Shirts ▸</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#" style="width: 90%;">Crop Tops</a></li>
+            <li><a class="dropdown-item" href="#" style="width: 90%;">Blouses</a></li>
+            <li><a class="dropdown-item" href="#" style="width: 90%;">Korean</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-submenu">
+          <a class="dropdown-item" href="#">Pants ▸</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#" style="width: 90%;">Jeans</a></li>
+            <li><a class="dropdown-item" href="#" style="width: 90%;">Leggings</a></li>
+            <li><a class="dropdown-item" href="#" style="width: 90%;">Palazzo</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- CHILD -->
+    <li class="dropdown-submenu">
+      <a class="dropdown-item" href="#">Child ▸</a>
+      <ul class="dropdown-menu">
+        <li class="dropdown-submenu">
+          <a class="dropdown-item" href="#">Clothes ▸</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#" style="width: 90%;">Baby Wear</a></li>
+            <li><a class="dropdown-item" href="#" style="width: 90%;">T-Shirts</a></li>
+            <li><a class="dropdown-item" href="#" style="width: 90%;">Shorts</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- GYM -->
+    <li class="dropdown-submenu">
+      <a class="dropdown-item" href="#">Gym ▸</a>
+      <ul class="dropdown-menu">
+        <li class="dropdown-submenu">
+          <a class="dropdown-item" href="#">Equipments ▸</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#" style="width: 90%;">Dumbbells</a></li>
+            <li><a class="dropdown-item" href="#" style="width: 90%;">Treadmill</a></li>
+            <li><a class="dropdown-item" href="#" style="width: 90%;">Yoga Mat</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- OTHERS -->
+    <li class="dropdown-submenu">
+      <a class="dropdown-item" href="#">Others ▸</a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#" style="width: 90%;">Accessories</a></li>
+        <li><a class="dropdown-item" href="#" style="width: 90%;">Bags</a></li>
+        <li><a class="dropdown-item" href="#" style="width: 90%;">Shoes</a></li>
+      </ul>
+    </li>
+
+  </ul>
+</li>
+
+        <!-- Cart -->
+        <li class="nav-item">
+          <a class="nav-link text-white" href="cort.html"><i class="fa-solid fa-cart-shopping"></i>Cart</a>
+        </li>
+
+        <!-- Notifications -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
+          Notifications
           </a>
           <ul class="dropdown-menu dropdown-menu-end">
             <li class="dropdown-item text-muted">No new notifications</li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">View all</a></li>
+            <li><a class="dropdown-item" href="#" style="width: 90%;">View all</a></li>
           </ul>
         </li>
       </ul>
 
-        <!-- Right Side (User) -->
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
-              <i class="fa-solid fa-user" style="font-size:28px;"></i> 
-              <span class="fw-bold">sasi</span>
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end">
-              <li><h6 class="text text-center text-dark">HI SASI</h6></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#profile" style="width: 90%;"><i class="fa-solid fa-id-card"></i> Profile</a></li>
-              <li><a class="dropdown-item" href="#settings" style="width: 90%;"><i class="fa-solid fa-gear"></i> Settings</a></li>
-              <li><a class="dropdown-item" href="#orders" style="width: 90%;"><i class="fa-solid fa-history"></i> History order</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item text-danger" href="index.html" style="width: 90%;"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+      <!-- Right -->
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
+            <i class="fa-solid fa-user" style="font-size:28px;"></i> <span class="fw-bold">sasi</span>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><h6 class="dropdown-header">Hi Sasi</h6></li>
+            <li><a class="dropdown-item" href="#profile"><i class="fa-solid fa-id-card"></i> Profile</a></li>
+            <li><a class="dropdown-item" href="#settings"><i class="fa-solid fa-gear"></i> Settings</a></li>
+            <li><a class="dropdown-item" href="#orders"><i class="fa-solid fa-history"></i> Order History</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-danger" href="index.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+          </ul>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
 
   <br><br><br><br>
 
